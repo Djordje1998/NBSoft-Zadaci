@@ -1,39 +1,72 @@
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box
+}
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-  }
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+main{
+  border: #111;
+  border-style: groove;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
 .general {
   background-image: url(img/header_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 450px;
+  height: 400px;
+  padding-top: 65px;
+}
 
+.avatar {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info *{
+  margin-left: 60px;
+  padding-left: 60px;
+  color: white;
+}
+
+.header{
+  border-bottom: #111;
+  border-style: groove;
+  border-width: 0 0 3px;
+}
+
+h3 svg{
+  border-right: 3px groove black;
 }
 
 .pie {
@@ -46,14 +79,15 @@ nav ul {
   font-weight: bold;
   font-family: sans-serif;
 }
+
 .pie:before {
   content: "";
   position: absolute;
   border-radius: 50%;
   inset: 0;
-  background: conic-gradient(#808080 calc(var(--percentage)*1%),#0000 0);
-  -webkit-mask:radial-gradient(farthest-side,#0000 1px,#808080);
-          mask:radial-gradient(farthest-side,#0000 1px,#808080);
+  background: conic-gradient(#808080 calc(var(--percentage)*1%), #0000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 1px, #808080);
+  mask: radial-gradient(farthest-side, #0000 1px, #808080);
 }
 
 .skillbar {
@@ -63,14 +97,33 @@ nav ul {
 }
 
 .skills {
-  text-align: right; 
-  padding-top: 10px; 
-  padding-bottom: 10px; 
-  color: white; 
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
 }
 
-.one {width: 20%; background-color: #808080;}
-.two {width: 40%; background-color: #808080;} 
-.three {width: 60%; background-color: #808080;} 
-.four {width: 80%; background-color: #808080;} 
-.five {width: 100%; background-color: #808080;} 
+.one {
+  width: 20%;
+  background-color: #808080;
+}
+
+.two {
+  width: 40%;
+  background-color: #808080;
+}
+
+.three {
+  width: 60%;
+  background-color: #808080;
+}
+
+.four {
+  width: 80%;
+  background-color: #808080;
+}
+
+.five {
+  width: 100%;
+  background-color: #808080;
+}
