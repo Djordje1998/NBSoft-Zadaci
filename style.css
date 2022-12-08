@@ -63,10 +63,45 @@ main{
   border-bottom: #111;
   border-style: groove;
   border-width: 0 0 3px;
+  font-size: 20px;
+}
+
+.tags{
+  font-size: 26px;
+  border-radius: 0px;
+  padding: 5px 5px;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  color: #4F4F4F;
+  background-color: rgb(193, 193, 193);
+  margin: 5px;
+  
 }
 
 h3 svg{
   border-right: 3px groove black;
+  padding-right: 2px;
+  padding-bottom: 2px;
+}
+
+h2{
+  font-size: 22px !important;
+  font-weight: bold !important;
+}
+
+p{
+  margin-bottom: 0px !important;
+}
+
+section{
+  padding: 5px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.content{
+  padding-left: 35px;
 }
 
 .pie {
@@ -93,7 +128,7 @@ h3 svg{
 .skillbar {
   width: 100%;
   background-color: #ddd;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .skills {
