@@ -1,6 +1,12 @@
+main {
+  border: #111;
+  border-style: groove;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
 .general {
-  background-image: url(img/header_image.jpg);
+  background-image: url(resources/img/header_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -15,21 +21,21 @@
   object-fit: cover;
 }
 
-.info *{
+.info * {
   margin-left: 60px;
   padding-left: 60px;
   color: white;
   font-weight: bold;
 }
 
-.header{
+.header {
   border-bottom: #111;
   border-style: groove;
   border-width: 0 0 3px;
   font-size: 20px;
 }
 
-.tags{
+.tags {
   font-size: 26px;
   border-radius: 0px;
   padding: 5px 5px;
@@ -39,31 +45,31 @@
   color: #4F4F4F;
   background-color: rgb(193, 193, 193);
   margin: 5px;
-  
+
 }
 
-h3 svg{
+h3 svg {
   border-right: 3px groove black;
   padding-right: 2px;
   padding-bottom: 2px;
 }
 
-h2{
+h2 {
   font-size: 22px !important;
   font-weight: bold !important;
 }
 
-p{
+p {
   margin-bottom: 0px !important;
 }
 
-section{
+section {
   padding: 5px;
   padding-bottom: 25px;
   padding-top: 10px;
 }
 
-.content{
+.content {
   padding-left: 35px;
 }
 

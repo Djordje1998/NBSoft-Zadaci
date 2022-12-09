@@ -1,5 +1,8 @@
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
   }
   
   nav ul {
@@ -30,9 +33,3 @@
     background-color: #04AA6D;
   }
   
-  main{
-    border: #111;
-    border-style: groove;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
