@@ -4,6 +4,7 @@ const polMuski = document.getElementById("muski")
 const polZenski = document.getElementById("zenski")
 const godina = document.getElementById("godina")
 const adresa = document.getElementById("adresa")
+const grad = document.getElementById("grad")
 const form = document.getElementById("form")
 const errorDiv = document.getElementById("error")
 
@@ -21,22 +22,30 @@ form.addEventListener('submit', (e) => {
         messages.push('Prezime je predugacko')
     }
 
-    if (polMuski.value !== 'M' && polZenski.value !== 'Z') {
+    if (!polMuski.checked && !polZenski.checked) {
         messages.push('Pol nije selektovan')
     }
 
-    var reg = /^\d{4}$/
+    var regGod = /^\d{4}$/
 
-    if (!reg.test(godina.value)) {
+    if (!regGod.test(godina.value)) {
         messages.push('Godina redjenja nije cetvorocifreni broj')
     } else if (parseInt(godina.value) <= 1900 || parseInt(godina.value) >= 2022) {
         messages.push('Godina redjenja ne moze biti manje od 1900 i veca od 2022')
     }
 
+    var regAdresa = /^\w{2,30}\s+\w{2,30}\s+[1-9/-a-z]{1,5}\s*$/
+
     if (adresa.value.length <= 10) {
         messages.push('Adresa je prekratka')
     } else if (adresa.value.length > 75) {
         messages.push('Adresa je predugacka')
+    } else if(!regAdresa.test(adresa.value)){
+        messages.push('Adresa nije dobrog formata')
+    }
+
+    if (grad.value === 'prazno') {
+        messages.push('Grad nije selektovan')
     }
 
     if (messages.length > 0) {
