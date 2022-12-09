@@ -26,12 +26,12 @@
     <main class="container">
         <form class="row justify-content-md-center" action="">
             <div class="row  mb-3 justify-content-md-center">
-                <label class="col-md-2" for="Ime">Ime:</label>
-                <input class="col-md-3" type="text" name="Ime" id="ime" placeholder="Vase ime...">
+                <label class="col-md-2" for="ime">Ime:</label>
+                <input class="col-md-3" type="text" name="ime" id="ime" placeholder="Vase ime...">
             </div>
             <div class="row mb-3 justify-content-md-center">
-                <label class="col-md-2" for="Ime">Prezime:</label>
-                <input class="col-md-3" type="text" name="Prezime" id="Prezime" placeholder="Vase prezime...">
+                <label class="col-md-2" for="prezime">Prezime:</label>
+                <input class="col-md-3" type="text" name="prezime" id="prezime" placeholder="Vase prezime...">
             </div>
             <div class="row  mb-3 justify-content-md-center">
                 <div class="col-md-2">
@@ -45,8 +45,30 @@
                 </div>
             </div>
             <div class="row mb-3 justify-content-md-center">
+                <label class="col-md-2" for="godina">Godina rodjenja:</label>
+                <input class="col-md-3" type="text" name="godina" id="godina" placeholder="Godina rodjenja...">
+            </div>
+            <div class="row mb-3 justify-content-md-center">
                 <label class="col-md-2" for="adresa">Adresa:</label>
-                <textarea class="col-md-3" name="adresa" id="adresa" cols="10" rows="3" placeholder="Vasa adresa..."></textarea>
+                <textarea class="col-md-3" name="adresa" id="adresa" cols="10" rows="3"
+                    placeholder="Vasa adresa..."></textarea>
+            </div>
+            <div class="row mb-5 justify-content-md-center">
+                <label class="col-md-2" for="grad">Grad:</label>
+                <select class="col-md-3" name="grad" id="grad">
+                    <option value="beograd">Beograd</option>
+                    <option value="novi sad">Novi Sad</option>
+                    <option value="nis">Nis</option>
+                    <option value="pristina ">Pristina </option>
+                    <option value="kragujevac">Kragujevac</option>
+                </select>
+            </div>
+            <div class="row mb-5 justify-content-md-center">
+                <input class="col-md-1" type="checkbox" name="saglasnost" id="saglasnost" value="da">
+                <label class="col-md-4" for="saglasnost">I Agree to Terms and Conditions</label>
+            </div>
+            <div class="row mb-3 justify-content-md-center">
+                <input class="col-md-2" type="submit" value="Submit">
             </div>
         </form>
 
