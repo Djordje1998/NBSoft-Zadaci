@@ -5,10 +5,10 @@ const polZenski = document.getElementById("zenski")
 const godina = document.getElementById("godina")
 const adresa = document.getElementById("adresa")
 const grad = document.getElementById("grad")
-const form = document.getElementById("form")
+const dugme = document.getElementById("submitBtn")
 const errorDiv = document.getElementById("error")
 
-form.addEventListener('submit', (e) => {
+dugme.addEventListener('click', function (e) {
     let messages = []
     if (ime.value.length <= 2) {
         messages.push('Ime je prekratko')
@@ -36,11 +36,11 @@ form.addEventListener('submit', (e) => {
 
     var regAdresa = /^\w{2,30}\s+\w{2,30}\s+[1-9/-a-z]{1,5}\s*$/
 
-    if (adresa.value.length <= 10) {
+    if (adresa.value.length <= 7) {
         messages.push('Adresa je prekratka')
     } else if (adresa.value.length > 75) {
         messages.push('Adresa je predugacka')
-    } else if(!regAdresa.test(adresa.value)){
+    } else if (!regAdresa.test(adresa.value)) {
         messages.push('Adresa nije dobrog formata')
     }
 
@@ -51,6 +51,22 @@ form.addEventListener('submit', (e) => {
     if (messages.length > 0) {
         e.preventDefault()
         errorDiv.innerText = messages.join(', ')
+    } else {
+        var formData = {
+            ime: ime.value,
+            prezime: prezime.value,
+            pol: (polMuski.checked ? "Muski" : (polZenski.checked ? "Zenski" : "Greska")),
+            godine: godina.value,
+            adresa: adresa.value,
+            grad: grad.value
+        }
+        $.ajax({
+            url: "http://localhost/zadaci/api/zadatak2.php", type: "POST", data: formData, success: function (response) {
+                $("#response").html("<div class='alert alert-success'>" + response + "</div>")
+                console.log('Response ' + response)
+            }
+        });
     }
+
 
 })

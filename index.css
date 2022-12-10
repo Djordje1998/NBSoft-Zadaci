@@ -3,6 +3,7 @@ main {
   border-style: groove;
   margin-top: 100px;
   margin-bottom: 100px;
+  box-shadow: 1px 2px 20px rgba(204, 32, 32, 0.1);
 }
 
 .general {
