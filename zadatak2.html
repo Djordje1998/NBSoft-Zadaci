@@ -26,15 +26,18 @@
     </nav>
 
     <main class="container">
-        <div class="row  mb-3 justify-content-md-center" id="error">
+        <h1 class="text-center">Forma</h1>
+        <div class="row  mb-3 justify-content-md-center">
+            <div class="col-md-5 alert alert-danger text-center" id="error" style="display: none;">
+            </div>
         </div>
         <div class="row justify-content-md-center" id="form">
             <div class="row  mb-3 justify-content-md-center">
-                <label class="col-md-2" for="ime">Ime:</label>
-                <input class="col-md-3" type="text" name="ime" id="ime" required placeholder="Vase ime...">
+                <label class="col-md-2 form-label" for="ime">Ime:</label>
+                <input class="col-md-3 " type="text" name="ime" id="ime" required placeholder="Vase ime...">
             </div>
             <div class="row mb-3 justify-content-md-center">
-                <label class="col-md-2" for="prezime">Prezime:</label>
+                <label class="col-md-2 form-label" for="prezime">Prezime:</label>
                 <input class="col-md-3" type="text" name="prezime" id="prezime" required placeholder="Vase prezime...">
             </div>
             <div class="row  mb-3 justify-content-md-center">
@@ -43,23 +46,23 @@
                 </div>
                 <div class="col-md-3">
                     <input type="radio" id="muski" name="pol" value="M">
-                    <label for="muski">Muski</label>
+                    <label class="form-label" for="muski">Muski</label>
                     <input type="radio" id="zenski" name="pol" value="Z">
-                    <label for="zenski">Zenski</label>
+                    <label class="form-label" for="zenski">Zenski</label>
                 </div>
             </div>
             <div class="row mb-3 justify-content-md-center">
-                <label class="col-md-2" for="godina">Godina rodjenja:</label>
+                <label class="col-md-2 form-label" for="godina">Godina rodjenja:</label>
                 <input class="col-md-3" type="text" name="godina" id="godina" required placeholder="Godina rodjenja...">
             </div>
             <div class="row mb-3 justify-content-md-center">
-                <label class="col-md-2" for="adresa">Adresa:</label>
+                <label class="col-md-2 form-label" for="adresa">Adresa:</label>
                 <textarea class="col-md-3" name="adresa" id="adresa" required cols="10" rows="3"
                     placeholder="npr. Pere Cetkovica 23"></textarea>
             </div>
             <div class="row mb-5 justify-content-md-center">
-                <label class="col-md-2" for="grad">Grad:</label>
-                <select class="col-md-3" name="grad" id="grad">
+                <label class="col-md-2 form-label" for="grad">Grad:</label>
+                <select class="col-md-3 " name="grad" id="grad">
                     <option value="prazno">---Izaberi---</option>
                     <option value="Beograd">Beograd</option>
                     <option value="Novi Sad">Novi Sad</option>
@@ -69,11 +72,11 @@
                 </select>
             </div>
             <div class="row mb-5 justify-content-md-center">
-                <input class="col-md-1" type="checkbox" name="saglasnost" id="saglasnost" required value="da">
-                <label class="col-md-4" for="saglasnost">I Agree to Terms and Conditions!</label>
+                <input class="col-md-1 " type="checkbox" name="saglasnost" id="saglasnost" required value="da">
+                <label class="col-md-4 form-label" for="saglasnost">Agree to terms and conditions!</label>
             </div>
             <div class="row mb-3 justify-content-md-center">
-                <button class="col-md-2" type="submit" id="submitBtn">Submit</button>
+                <button class="col-md-2 btn btn-primary" type="submit" id="submitBtn">Submit</button>
             </div>
         </div>
         <div class="row  mb-3 justify-content-md-center" id="response">
