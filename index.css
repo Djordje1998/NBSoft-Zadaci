@@ -4,14 +4,64 @@ main {
   margin-top: 100px;
   margin-bottom: 100px;
   box-shadow: 1px 2px 20px rgba(204, 32, 32, 0.1);
+  font-family: 'Source Serif Pro', serif;
+}
+
+h1{
+  padding-bottom: 40px;
+  font-weight: 400 !important;
+}
+
+main a:link {
+  text-decoration: none;
+  color: rgb(56, 55, 55);
+}
+
+main a:visited {
+  text-decoration: none;
+  color: rgb(56, 55, 55);
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: rgb(56, 55, 55);
+}
+
+main a:active {
+  text-decoration: underline;
+  color: rgb(56, 55, 55);
+}
+
+.info a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.info a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.info a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.info a:active {
+  text-decoration: underline;
+  color: white;
 }
 
 .general {
   background-image: url(resources/img/header_image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 350px;
   padding-top: 65px;
+}
+
+.avatar-div {
+  position: relative;
 }
 
 .avatar {
@@ -20,11 +70,14 @@ main {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  position: absolute;
+  top: 80px;
+  right: 50px;
 }
 
 .info * {
-  margin-left: 60px;
-  padding-left: 60px;
+  margin-left: 50px;
+  padding-left: 25px;
   color: white;
   font-weight: bold;
 }
@@ -37,9 +90,9 @@ main {
 }
 
 .tags {
-  font-size: 26px;
+  font-size: 20px;
   border-radius: 0px;
-  padding: 5px 5px;
+  padding: 8px 8px;
   display: inline-block;
   line-height: 1;
   text-align: center;
@@ -56,8 +109,13 @@ h3 svg {
 }
 
 h2 {
-  font-size: 22px !important;
+  font-size: 20px !important;
   font-weight: bold !important;
+}
+
+h4 {
+  font-size: 19px !important;
+  padding-top: 5px;
 }
 
 p {
@@ -97,7 +155,7 @@ section {
 
 .skillbar {
   width: 100%;
-  background-color: #ddd;
+  background-color: #c1c1c1;
   margin-bottom: 5px;
 }
 
@@ -110,25 +168,25 @@ section {
 
 .one {
   width: 20%;
-  background-color: #808080;
+  background-color: #000;
 }
 
 .two {
   width: 40%;
-  background-color: #808080;
+  background-color: #000;
 }
 
 .three {
   width: 60%;
-  background-color: #808080;
+  background-color: #000;
 }
 
 .four {
   width: 80%;
-  background-color: #808080;
+  background-color: #000;
 }
 
 .five {
   width: 100%;
-  background-color: #808080;
+  background-color: #000;
 }
