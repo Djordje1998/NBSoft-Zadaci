@@ -46,25 +46,25 @@
         <div class="row justify-content-md-center">
             <div class="col-md-8">
                 <p>Prikažite sve korisnike koji su imali najmanje dve porudžbine:</p>
-                <pre><code>SELECT u.* <br>FROM (<br>SELECT u.id, COUNT(u.firstname) AS cnt <br>FROM user u <br> INNER JOIN order o ON u.id=o.userId <br>GROUP BY u.id <br>) uc INNER JOIN user u ON uc.id=u.id <br>WHERE cnt >= 2;</code></pre>
+                <pre><code>SELECT u.* <br>FROM (<br>SELECT u.id, COUNT(u.firstname) AS cnt <br>FROM user u <br>INNER JOIN order o ON u.id=o.userId <br>GROUP BY u.id <br>) uc INNER JOIN user u ON uc.id=u.id <br>WHERE cnt >= 2;</code></pre>
             </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-8">
-                <p>4. Sql upit</p>
-                <pre><code></code></pre>
+                <p>Prikažite ime I prezime korisnika, id porudžbine I broj stavki za svaku porudžbinu:</p>
+                <pre><code>SELECT u.firstname, u.lastname, o.id AS OrderID, oc.cnt AS ItemCount <br>FROM user u <br>INNER JOIN order o ON u.id=o.userId <br>INNER JOIN ( <br>SELECT o.id, COUNT(o.id) AS cnt <br>FROM order o <br>INNER JOIN orderItem i ON o.id=i.orderId <br>GROUP BY o.id <br>) oc ON o.id=oc.id;</code></pre>
             </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-8">
-                <p>5. Sql upit</p>
-                <pre><code></code></pre>
+                <p>Prikažite ime I prezime korisnika, id porudžbine koja ima najmanje dve stavke:</p>
+                <pre><code>SELECT u.firstname, u.lastname, o.id AS OrderID, oc.cnt AS ItemCount <br>FROM user u <br>INNER JOIN order o ON u.id=o.userId <br>INNER JOIN ( <br>SELECT o.id, COUNT(o.id) AS cnt <br>FROM order o <br>INNER JOIN orderItem i ON o.id=i.orderId <br>GROUP BY o.id <br>) oc ON o.id=oc.id <br>WHERE oc.cnt >= 2; </code></pre>
             </div>
         </div>
         <div class="row justify-content-md-center">
             <div class="col-md-8">
-                <p>6. Sql upit</p>
-                <pre><code></code></pre>
+                <p>Prikažite sve korisnike koji su kupili najmanje tri različita proizvoda u svim porudžbinama:</p>
+                <pre><code>SELECT * <br>FROM user u <br>INNER JOIN ( <br>SELECT o.userid, COUNT(i.productid) AS cnt <br>FROM order o <br>INNER JOIN orderItem i ON o.id=i.orderID <br>GROUP BY o.id <br>) gp ON u.id=gp.userid <br>GROUP BY id <br>HAVING MIN(cnt)>=3;</code></pre>
             </div>
         </div>
     </main>
