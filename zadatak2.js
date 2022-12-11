@@ -64,7 +64,7 @@ dugme.addEventListener('click', function (e) {
             grad: grad.value
         }
         $.ajax({
-            url: "http://localhost/zadaci/api/zadatak2.php", type: "POST", data: formData, success: function (response) {
+            url: "https://localhost/zadaci/api/zadatak2.php", type: "POST", data: formData, success: function (response) {
                 var res = JSON.parse(response)
                 if (res.success) {
                     $("#response").html("<div class='col-md-5 alert alert-success text-center'>" +
