@@ -190,3 +190,18 @@ section {
   width: 100%;
   background-color: #000;
 }
+
+@media only screen and (max-width: 767px) {
+  .avatar{
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .pie {
+    height: 50px !important;
+    width: 50px!important;
+    aspect-ratio: 1;
+    font-size: 14px;
+  }
+}
