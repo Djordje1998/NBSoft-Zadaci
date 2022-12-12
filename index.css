@@ -7,7 +7,7 @@ main {
   font-family: 'Source Serif Pro', serif;
 }
 
-h1{
+h1 {
   padding-bottom: 40px;
   font-weight: 400 !important;
 }
@@ -192,10 +192,6 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
-  .avatar{
-    display: none !important;
-  }
-
   .info * {
     margin-left: 10px;
     padding-left: 10px;
@@ -204,10 +200,16 @@ section {
   }
 }
 
+@media only screen and (max-width: 576px) {
+  .avatar-div {
+    display: none !important;
+  }
+}
+
 @media only screen and (max-width: 991px) {
   .pie {
     height: 50px !important;
-    width: 50px!important;
+    width: 50px !important;
     aspect-ratio: 1;
     font-size: 14px;
   }
