@@ -195,6 +195,13 @@ section {
   .avatar{
     display: none !important;
   }
+
+  .info * {
+    margin-left: 10px;
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 991px) {
